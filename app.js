@@ -38,7 +38,7 @@ function requiereAuth(req, res, next) {
 
 // Middleware global para todas las vistas
 app.use((req, res, next) => {
-  res.locals.tema = req.cookies.tema || "claro"; // ahora todas las vistas tienen acceso a "tema"
+  res.locals.tema = req.cookies.tema || "claro"; 
   next();
 });
 
@@ -47,8 +47,8 @@ app.use((req, res, next) => {
 
 // Página de inicio
 app.get("/", (req, res) => {
-  const tema = req.cookies.tema || "claro"; // lee la cookie
-  res.render("index", { tema });            // pasa tema a la vista
+  const tema = req.cookies.tema || "claro"; 
+  res.render("index", { tema });            
 });
 
 
@@ -61,7 +61,7 @@ app.get("/registro", (req, res) => {
     ciudad: "",
     intereses: [],
     errores: [],
-    tema: req.cookies.tema || "claro" // ← Muy importante
+    tema: req.cookies.tema || "claro" 
   });
 });
 
@@ -80,7 +80,7 @@ app.post("/registro", (req, res) => {
   if (errores.length) {
     return res.status(400).render("registro", {
       nombre, email, edad, ciudad, intereses, errores,
-      tema: req.cookies.tema || "claro" // ← aquí pasas el tema
+      tema: req.cookies.tema || "claro" 
     });
   }
 
@@ -159,7 +159,7 @@ app.get("/tema/:modo", (req, res) => {
   res.redirect("/preferencias");
 });
 
-// --- INICIO DEL SERVIDOR ---
+//  INICIO DEL SERVIDOR 
 app.listen(PORT, () => {
   console.log(`Servidor funcionando en http://localhost:${PORT}`);
 });
