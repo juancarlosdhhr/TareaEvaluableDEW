@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="<%= tema === 'oscuro' ? 'dark' : 'light' %>">
+  <h1>Login</h1>
+
+  <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+
+  <form method="POST">
+    <input name="email" placeholder="Email">
+    <input name="password" type="password">
+    <button>Entrar</button>
+  </form>
+
+  <p><a href="/">Inicio</a></p>
+</body>
+</html>
+

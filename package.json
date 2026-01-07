@@ -1,0 +1,19 @@
+{
+  "name": "tareaevaluabledew",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "ejs": "^3.1.10",
+    "cookie-parser": "^1.4.7",
+    "express-session": "^1.18.2",
+    "dayjs": "^1.11.19"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

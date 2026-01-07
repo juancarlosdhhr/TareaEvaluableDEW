@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preferencias</title>
+  <link rel="stylesheet" href="/style.css"> <!-- enlaza tu CSS -->
+</head>
+<body class="<%= tema === 'oscuro' ? 'dark' : 'light' %>">
+  <h1>Preferencias</h1>
+  <p>Tema actual: <%= tema %></p>
+
+  <a href="/tema/claro">Tema Claro</a> | 
+  <a href="/tema/oscuro">Tema Oscuro</a>
+
+  <p><a href="/">Volver al inicio</a></p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "nombre": "Juan Carlos",
+    "email": "juancadah@gmail.com",
+    "edad": "33",
+    "ciudad": "Santa Ursula",
+    "intereses": [
+      "meditacion",
+      "energia"
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro</title>
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+<body class="<%= tema === 'oscuro' ? 'dark' : 'light' %>">
+<h1>Registro</h1>
+
+<% if (errores && errores.length > 0) { %>
+  <div style="color:red;">
+    <ul>
+      <% errores.forEach(e => { %>
+        <li><%= e %></li>
+      <% }) %>
+    </ul>
+  </div>
+<% } %>
+
+<form method="POST" action="/registro">
+  <label>Nombre: <input type="text" name="nombre" value="<%= nombre %>"></label><br>
+  <label>Email: <input type="email" name="email" value="<%= email %>"></label><br>
+  <label>Edad: <input type="number" name="edad" value="<%= edad %>"></label><br>
+  <label>Ciudad: <input type="text" name="ciudad" value="<%= ciudad %>"></label><br>
+
+  <fieldset>
+    <legend>Intereses</legend>
+    <label>
+      <input type="checkbox" name="intereses" value="meditacion" <%= (intereses||[]).includes("meditacion") ? "checked" : "" %>>
+      Meditación
+    </label>
+    <label>
+      <input type="checkbox" name="intereses" value="energia" <%= (intereses||[]).includes("energia") ? "checked" : "" %>>
+      Energía
+    </label>
+  </fieldset>
+
+  <button>Registrarse</button>
+</form>
+
+<p><a href="/">Inicio</a></p>
+</body>
+</html>
