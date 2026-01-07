@@ -1,3 +1,29 @@
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente agradable */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  margin-bottom: 20px;
+  color: #6a5acd;
+}
+
+
 body.light {
   background-color: white;
   color: black;
@@ -6,4 +32,71 @@ body.light {
 body.dark {
   background-color: #222;
   color: white;
+}
+
+
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+body.dark form {
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #6a5acd; /* color morado suave */
+  outline: none;
+}
+
+button {
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #836fff;
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+ 
+  gap: 15px;
+  
+  margin-bottom: 30px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #6a5acd;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  text-decoration: underline;
 }
